@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Reading & Understanding | Part 1 of 2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="app.js"></script>
+
+<body>
+
+<!--skip menu is visually hidden where each button is visible on keyboard focus -->
+<div>
+    <h2 class="qti-visually-hidden">Skip menu</h2>
+    <a href="#main" class="jump-link" tabindex="0" role="button">Skip to question 7</a></br>
+    <a href="#navigation" class="jump-link" tabindex="0" role="button">Skip to navigation</a></br>
+    <a href="#tools" class="jump-link" tabindex="0" role="button">Skip to tool box & configuration</a></br>
+</div>
+</br>
+
+<header>
+    <button aria-label="main menu"
+            onclick="alert('This would open the main menu where you could pause the test, log out, or switch tests.')">
+        <img src="images/circle.svg" alt="" height="20" width="20"/></button>
+    <h1 id="assessment_name">Reading & Understanding
+        - Part 1 of 2: The American Dream <span id="demo" aria-label="Time remaining in this part: "></span></h1>
+</header>
+
+<aside aria-labelledby="tools">
+    <h2 id="tools" class="qti-visually-hidden">tool box & configuration</h2>
+    <!-- if 0 tools, no title -->
+    <h3 id="tool_title" class="qti-visually-hidden">My Test Tools</h3>
+    <button onclick="alert('This would launch a calculator that you could use to answer the question.')">Calculator
+    </button>
+    <button onclick="alert('This would enable the highlighter tool that lets you highlight passage and question text. It would disable other text interactivity until the tool was turned off.')">
+        Highlighter
+    </button>
+    <!-- if 0 exhibits, no title -->
+    <h3 class="qti-visually-hidden">My Exhibits</h3>
+    <button onclick="alert('This opens the periodic table of elements in a draggable window.')">Exhibit: Periodic Table
+        of Elements
+    </button>
+    <!-- The configuration button visually appears on the far right of the top-->
+    <h3 class="qti-visually-hidden">My Test Configuration</h3>
+    <button onclick="alert('This opens the test configuration panel. From here you can adjust settings like the zoom level or the font sizes.')">
+        Test Configuration
+    </button>
+</aside>
+
+<main id="main">
+    <article aria-labelledby="question_title">
+        <h2 id="question_title" class="qti-visually-hidden">Question 7 of 14 - unanswered. In Question Group 1 of
+            2.</h2>
+
+        <!-- PASSAGE area, which isn't always present -->
+        <!-- If only one container, do not use sections -->
+
+        <section aria-label="reading passage">
+            <h3 id="passage_title"><span class="qti-visually-hidden">Passage: </span>Shopping in the USA</h3>
+            <p>Every day, millions of shoppers hit the stores in
+                full force—both online and on foot—searching
+                frantically for the perfect gift. Last year, Americans
+                spent over $30 billion at retail stores in the month of
+                December alone. Aside from purchasing holiday
+                gifts, most people regularly buy presents for other
+                occasions throughout the year, including weddings,
+                birthdays, anniversaries, graduations, and baby
+                showers. This frequent experience of gift-giving can
+                engender ambivalent feelings in gift-givers. Many
+                relish the opportunity to buy presents because
+                gift-giving offers a powerful means to build stronger
+                bonds with one’s closest peers. At the same time,
+                many dread the thought of buying gifts; they worry
+                that their purchases will disappoint rather than
+                delight the intended recipients.
+                Anthropologists describe gift-giving as a positive
+                social process, serving various political, religious, and
+                psychological functions. Economists, however, offer
+                a less favorable view. According to Waldfogel (1993),
+                gift-giving represents an objective waste of resources.
+                People buy gifts that recipients would not choose to
+                buy on their own, or at least not spend as much
+                money to purchase (a phenomenon referred to as
+                ‘‘the deadweight loss of Christmas”). To wit, givers
+                are likely to spend $100 to purchase a gift that
+                receivers would spend only $80 to buy themselves.
+                This ‘‘deadweight loss” suggests that gift-givers are
+                not very good at predicting what gifts others will
+                appreciate. That in itself is not surprising to social
+                psychologists. Research has found that people often
+                struggle to take account of others’ perspectives—
+                their insights are subject to egocentrism, social
+                projection, and multiple attribution errors.</p>
+        </section>
+
+        <!-- BEGIN QUESTION AREA -->
+        <section aria-label="question">
+            <h3 class="prompt"><span class="visually-hidden">Question: </span>The authors indicate that people value
+                gift-giving because they feel it ...</h3>
+            <button onclick="alert('You chose the A Answer. This would change the state of the button to selected.')">A)
+                functions as a form of self-expression.
+            </button>
+            <!-- strike through always has a check box interactivity -->
+            <button onclick="alert('You chose to eliminate A Answer. This would change the status of this choice as eliminated.')">
+                eliminate answer A
+            </button>
+            </br>
+            <button onclick="alert('You chose the B Answer. This would change the state of the button to selected.')">B)
+                is an inexpensive way to show appreciation.
+            </button>
+            <button onclick="alert('You chose to eliminate B Answer. This would change the status of this choice as eliminated.')">
+                eliminate answer B
+            </button>
+            </br>
+            <button onclick="alert('You chose the C Answer. This would change the state of the button to selected.')">C)
+                requires the gift-recipient to reciprocate.
+            </button>
+            <button onclick="alert('You chose to eliminate C Answer. This would change the status of this choice as eliminated.')">
+                eliminate answer C
+            </button>
+            </br>
+            <div>
+                <!-- If no flagging allowed or sequential only navigation, no title -->
+                <h3 id="flag_title" class="qti-visually-hidden">Flag for review.</h3>
+                <button role="switch"
+                        onclick="alert('You chose to flag this question for later review. This would change the state of this button, and flag this question in all the places that reference this item.')">
+                    Flag Question 7 for
+                    review.
+                </button>
+            </div>
+        </section>
+    </article>
+</main>
+
+<nav id="navigation">
+    <h2 class="qti-visually-hidden">Navigation</h2>
+    <button aria-label="go to next question" id="next"
+            onclick="alert('This would move you to the next question in the test.')"><img src="images/circle.svg" alt=""
+                                                                                          height="40" width="40">
+    </button>
+    <!-- if allowed to navigate back to previous questions -->
+    <button aria-label="go to previous question" id="previous"
+            onclick="alert('This would move you to the previous question in the test.')"><img src="images/circle.svg"
+                                                                                              alt="" height="40"
+                                                                                              width="40"></button>
+    <!-- if there is an overview page -->
+    <button aria-label="Overview and Submit" id="overview"
+            onclick="alert('This would display the full map of the test and give the test taker the opportunity to submit this part of the test.')">
+        Overview & Submit
+    </button>
+    <!--create the full list of all the links in the test part using the screen reader-->
+    <!-- if no test map or sequential only navigation, no titles or buttons -->
+    <ol>
+        <h3 class="qti-visually-hidden">Question Group 1 of 2: Shopping in the USA. The remaining time for this group is
+            <span id="section_timer">8 minutes 22 seconds</span></h3>
+        <fieldset>
+            <legend>Shopping in the USA</legend>
+            <li>
+                <a tabindex="-1" href="#" aria-label="Question 1. Answered">1</a>
+            </li>
+            <li>
+                <a tabindex="-1" href="#" aria-label="Question 2. Answered">2</a>
+            </li>
+            <li>
+                <a tabindex="-1" href="#" aria-label="Question 3. Answered">3</a>
+            </li>
+            <li>
+                <a tabindex="-1" href="#" aria-label="Question 4. Answered, Flagged for Review.">4</a>
+            </li>
+            <li>
+                <a tabindex="-1" href="#" aria-label="Question 5. Not answered, Flagged for Review.">5</a>
+            </li>
+            <li>
+                <a tabindex="-1" href="#" aria-label="Question 6. Not answered, Flagged for Review.">6</a>
+            </li>
+            <li>
+                <a tabindex="-1" href="#" aria-label="Current Question 7. Not answered.">7</a>
+            </li>
+        </fieldset>
+    </ol>
+    <ol>
+        <h3 class="qti-visually-hidden">Question Group 2 of 2: The Land of the Free. The available time for this group
+            is <span id="section_timer">10 minutes</span></h3>
+        <fieldset>
+            <legend>The Land of the Free</legend>
+            <li>
+                <a tabindex="-1" href="#" aria-label="Question 8. Not seen.">8</a>
+            </li>
+            <li>
+                <a tabindex="-1" href="#" aria-label="Question 9. Not seen.">9</a>
+            </li>
+            <li>
+                <a tabindex="-1" href="#" aria-label="Question 10. Not seen.">10</a>
+            </li>
+            <li>
+                <a tabindex="-1" href="#" aria-label="Question 11. Not seen.">11</a>
+            </li>
+            <li>
+                <a tabindex="-1" href="#" aria-label="Question 12. Not seen.">12</a>
+            </li>
+            <li>
+                <a tabindex="-1" href="#" aria-label="Question 13. Not seen.">13</a>
+            </li>
+            <li>
+                <a tabindex="-1" href="#" aria-label="Question 14. Not seen.">14</a>
+            </li>
+        </fieldset>
+
+    </ol>
+</nav>
+</body>
+</html>

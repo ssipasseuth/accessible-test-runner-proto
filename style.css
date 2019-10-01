@@ -1,0 +1,71 @@
+.qti-visually-hidden {
+    opacity: 0.25;
+}
+
+.qti-visually-hidden:focus {
+    opacity: 1;
+}
+
+.jump-link {
+    opacity: 0.25;
+}
+
+.jump-link:focus {
+    opacity: 1;
+}
+
+#navigation{
+    position: relative;
+}
+
+#next {
+    float: right;
+}
+
+#overview {
+    float: right;
+}
+
+#previous {
+    float: left;
+}
+
+button {
+    cursor: pointer;
+    padding: 10px 20px;
+    border: 1px solid #444;
+    margin: 10px;
+    border-radius: 8px;
+}
+
+ol {
+    list-style-type: none;
+    display: inline-block;
+    width: 33%;
+}
+
+li {
+    float: left;
+    padding: 4px;
+}
+
+article {
+    width: 50%;
+}
+
+aside {
+    margin-left: auto;
+    margin-right: 5%;
+}
+
+:focus {
+    -webkit-box-shadow: 0px 0px 4px 4px rgba(0,81,151,1);
+    -moz-box-shadow: 0px 0px 4px 4px rgba(0,81,151,1);
+    box-shadow: 0px 0px 4px 4px rgba(0,81,151,1);
+}
+
+fieldset{
+    border-color: #ddd;
+}
+
+
